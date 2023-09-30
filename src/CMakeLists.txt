@@ -1,10 +1,6 @@
-cmake_minimum_required(VERSION 3.8)
+aux_source_directory(SRC_LIST .)
 
-set(CMAKE_BUILD_TYPE DEBUG)
-
-project(posesolve)
-
-add_executable(slovepose slovepose.cpp)
+add_executable(slovepose ${SRC_LIST})
 
 find_package(OpenCV REQUIRED)
 target_include_directories(slovepose PUBLIC ${OpenCV_INCLUDE_DIRS})
