@@ -129,29 +129,65 @@ slovepose/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/build
 .PHONY : slovepose/fast
 
-slovepose.o: slovepose.cpp.o
-.PHONY : slovepose.o
-
 # target to build an object file
-slovepose.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/slovepose.cpp.o
-.PHONY : slovepose.cpp.o
-
-slovepose.i: slovepose.cpp.i
-.PHONY : slovepose.i
+PNP.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/PNP.o
+.PHONY : PNP.o
 
 # target to preprocess a source file
-slovepose.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/slovepose.cpp.i
-.PHONY : slovepose.cpp.i
-
-slovepose.s: slovepose.cpp.s
-.PHONY : slovepose.s
+PNP.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/PNP.i
+.PHONY : PNP.i
 
 # target to generate assembly for a file
-slovepose.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/slovepose.cpp.s
-.PHONY : slovepose.cpp.s
+PNP.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/PNP.s
+.PHONY : PNP.s
+
+# target to build an object file
+real3D.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/real3D.o
+.PHONY : real3D.o
+
+# target to preprocess a source file
+real3D.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/real3D.i
+.PHONY : real3D.i
+
+# target to generate assembly for a file
+real3D.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/real3D.s
+.PHONY : real3D.s
+
+# target to build an object file
+recognition.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/recognition.o
+.PHONY : recognition.o
+
+# target to preprocess a source file
+recognition.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/recognition.i
+.PHONY : recognition.i
+
+# target to generate assembly for a file
+recognition.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/recognition.s
+.PHONY : recognition.s
+
+# target to build an object file
+slovepose.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/slovepose.o
+.PHONY : slovepose.o
+
+# target to preprocess a source file
+slovepose.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/slovepose.i
+.PHONY : slovepose.i
+
+# target to generate assembly for a file
+slovepose.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/slovepose.s
+.PHONY : slovepose.s
 
 # Help Target
 help:
@@ -162,6 +198,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... slovepose"
+	@echo "... PNP.o"
+	@echo "... PNP.i"
+	@echo "... PNP.s"
+	@echo "... real3D.o"
+	@echo "... real3D.i"
+	@echo "... real3D.s"
+	@echo "... recognition.o"
+	@echo "... recognition.i"
+	@echo "... recognition.s"
 	@echo "... slovepose.o"
 	@echo "... slovepose.i"
 	@echo "... slovepose.s"
