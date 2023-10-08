@@ -4,16 +4,10 @@
 #include <opencv4/opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
-#include <time.h>
-
+#include "function.h"
 using namespace std;
 using namespace cv;
 
-
-std::pair<Mat, Mat> posePNP(Mat camera_matrix,Mat dist_coeffs,Mat image,
-	vector<Point2d> image_points,vector<Point3d> model_points);
-Point3d get3D(Mat cameraMatrix, double u, double v, double depth);
-vector<Point2d> Recog(Mat frame);
 
 const int kThreashold = 220;
 const int kMaxVal = 255;
@@ -44,7 +38,8 @@ int main(){
             break;
         }
         // 完成装甲板识别得到对应像素点和实际点
-        vector<Point2d> image_points = Recog(frame);
+        vector<Point2d> image_points = imp_reco(frame);
+        //  vector<Point2d> image_points = Reco(frame);
         vector<Point3d> model_points;
         for(int i=0;i<4;i++){
             Point3d point = get3D(cameraMatrix,image_points[i].x,image_points[i].y,10);

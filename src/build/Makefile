@@ -145,6 +145,21 @@ PNP.s:
 .PHONY : PNP.s
 
 # target to build an object file
+imp_reco.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/imp_reco.o
+.PHONY : imp_reco.o
+
+# target to preprocess a source file
+imp_reco.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/imp_reco.i
+.PHONY : imp_reco.i
+
+# target to generate assembly for a file
+imp_reco.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/imp_reco.s
+.PHONY : imp_reco.s
+
+# target to build an object file
 real3D.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/slovepose.dir/build.make CMakeFiles/slovepose.dir/real3D.o
 .PHONY : real3D.o
@@ -201,6 +216,9 @@ help:
 	@echo "... PNP.o"
 	@echo "... PNP.i"
 	@echo "... PNP.s"
+	@echo "... imp_reco.o"
+	@echo "... imp_reco.i"
+	@echo "... imp_reco.s"
 	@echo "... real3D.o"
 	@echo "... real3D.i"
 	@echo "... real3D.s"

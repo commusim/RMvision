@@ -31,15 +31,15 @@ int main()
         threshold(channels[0], binary, kThreashold, kMaxVal, 0);
         GaussianBlur(binary, Gaussian, kGaussianBlueSize, 0);
         findContours(Gaussian, contours, hierarchy, RETR_TREE, CHAIN_APPROX_NONE);
-        int counter = 0,index[20];
-        for (int i = 0; i < contours.size(); i++) {
+        int counter = 0,index[20] = {0};
+         for (int i = 0; i < contours.size(); i++) {
             //box = minAreaRect(Mat(contours[i]));
            //box.points(boxPts.data());
             boundRect = boundingRect(Mat(contours[i]));
             //rectangle(frame, boundRect.tl(), boundRect.br(), (0, 255, 0), 2,8 ,0);
             try
             {
-                if (double(boundRect.height / boundRect.width) >= 1.3 && boundRect.height > 36 && boundRect.height>20) {
+                if (double(boundRect.height / boundRect.width) >= 1.3 && boundRect.height > 36 && boundRect.width>10) {
                     point_array[counter] = boundRect;
                     index[counter]=i;
                     counter++;
@@ -67,7 +67,7 @@ int main()
         }   
         try
         {
-            RotatedRect ellipse_1 = fitEllipse(contours[index[point_near[0]]]);  // 使用椭圆拟合轮廓
+        /*  RotatedRect ellipse_1 = fitEllipse(contours[index[point_near[0]]]);  // 使用椭圆拟合轮廓
             RotatedRect ellipse_2 = fitEllipse(contours[index[point_near[1]]]);  // 使用椭圆拟合轮廓
             // 根据椭圆获取灯条的倾斜角度
             double angle_1 = ellipse_1.angle;
@@ -86,6 +86,25 @@ int main()
         rot_2.points(vertices);
         for (int i = 0; i < 4; i++)
 		    line(frame, vertices[i], vertices[(i + 1) % 4], Scalar(0, 255, 0), 2);
+        }*/
+        Point2f armor[4],cache[4];
+        for(int i=0;i<2;i++){
+            RotatedRect ellipse = fitEllipse(contours[index[point_near[i]]]);
+            double angle = ellipse.angle;
+            Rect rect = boundingRect(contours[index[point_near[i]]]);
+            RotatedRect rot(Point2f(rect.x+rect.width/2,rect.y+rect.height/2),
+                Size2f(rect.width,rect.height),angle);
+            rot.points(cache);
+            armor[i*2] = cache[i*2];
+            armor[i*2+1] = cache[i*2+1];
+            }
+        
+            for (int i = 0; i < 4; i++){
+            line(frame, armor[i], armor[(i + 1) % 4], Scalar(0, 255, 0), 2);
+    
+        cout<< armor[0].x-armor[2].x<<endl;
+        }
+        
         }
         catch (const char* msg)
         {

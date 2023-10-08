@@ -83,10 +83,24 @@ CMakeFiles/slovepose.dir/PNP.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slovepose.dir/PNP.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/commusim/RM/vision/src/PNP.cpp -o CMakeFiles/slovepose.dir/PNP.s
 
+CMakeFiles/slovepose.dir/imp_reco.o: CMakeFiles/slovepose.dir/flags.make
+CMakeFiles/slovepose.dir/imp_reco.o: ../imp_reco.cpp
+CMakeFiles/slovepose.dir/imp_reco.o: CMakeFiles/slovepose.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/slovepose.dir/imp_reco.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slovepose.dir/imp_reco.o -MF CMakeFiles/slovepose.dir/imp_reco.o.d -o CMakeFiles/slovepose.dir/imp_reco.o -c /home/commusim/RM/vision/src/imp_reco.cpp
+
+CMakeFiles/slovepose.dir/imp_reco.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/slovepose.dir/imp_reco.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/commusim/RM/vision/src/imp_reco.cpp > CMakeFiles/slovepose.dir/imp_reco.i
+
+CMakeFiles/slovepose.dir/imp_reco.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/slovepose.dir/imp_reco.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/commusim/RM/vision/src/imp_reco.cpp -o CMakeFiles/slovepose.dir/imp_reco.s
+
 CMakeFiles/slovepose.dir/real3D.o: CMakeFiles/slovepose.dir/flags.make
 CMakeFiles/slovepose.dir/real3D.o: ../real3D.cpp
 CMakeFiles/slovepose.dir/real3D.o: CMakeFiles/slovepose.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/slovepose.dir/real3D.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/slovepose.dir/real3D.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slovepose.dir/real3D.o -MF CMakeFiles/slovepose.dir/real3D.o.d -o CMakeFiles/slovepose.dir/real3D.o -c /home/commusim/RM/vision/src/real3D.cpp
 
 CMakeFiles/slovepose.dir/real3D.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/slovepose.dir/real3D.s: cmake_force
 CMakeFiles/slovepose.dir/recognition.o: CMakeFiles/slovepose.dir/flags.make
 CMakeFiles/slovepose.dir/recognition.o: ../recognition.cpp
 CMakeFiles/slovepose.dir/recognition.o: CMakeFiles/slovepose.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/slovepose.dir/recognition.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/slovepose.dir/recognition.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slovepose.dir/recognition.o -MF CMakeFiles/slovepose.dir/recognition.o.d -o CMakeFiles/slovepose.dir/recognition.o -c /home/commusim/RM/vision/src/recognition.cpp
 
 CMakeFiles/slovepose.dir/recognition.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/slovepose.dir/recognition.s: cmake_force
 CMakeFiles/slovepose.dir/slovepose.o: CMakeFiles/slovepose.dir/flags.make
 CMakeFiles/slovepose.dir/slovepose.o: ../slovepose.cpp
 CMakeFiles/slovepose.dir/slovepose.o: CMakeFiles/slovepose.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/slovepose.dir/slovepose.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/slovepose.dir/slovepose.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/slovepose.dir/slovepose.o -MF CMakeFiles/slovepose.dir/slovepose.o.d -o CMakeFiles/slovepose.dir/slovepose.o -c /home/commusim/RM/vision/src/slovepose.cpp
 
 CMakeFiles/slovepose.dir/slovepose.i: cmake_force
@@ -128,6 +142,7 @@ CMakeFiles/slovepose.dir/slovepose.s: cmake_force
 # Object files for target slovepose
 slovepose_OBJECTS = \
 "CMakeFiles/slovepose.dir/PNP.o" \
+"CMakeFiles/slovepose.dir/imp_reco.o" \
 "CMakeFiles/slovepose.dir/real3D.o" \
 "CMakeFiles/slovepose.dir/recognition.o" \
 "CMakeFiles/slovepose.dir/slovepose.o"
@@ -136,6 +151,7 @@ slovepose_OBJECTS = \
 slovepose_EXTERNAL_OBJECTS =
 
 slovepose: CMakeFiles/slovepose.dir/PNP.o
+slovepose: CMakeFiles/slovepose.dir/imp_reco.o
 slovepose: CMakeFiles/slovepose.dir/real3D.o
 slovepose: CMakeFiles/slovepose.dir/recognition.o
 slovepose: CMakeFiles/slovepose.dir/slovepose.o
@@ -196,7 +212,7 @@ slovepose: /usr/local/lib/libopencv_photo.so.4.8.0
 slovepose: /usr/local/lib/libopencv_imgproc.so.4.8.0
 slovepose: /usr/local/lib/libopencv_core.so.4.8.0
 slovepose: CMakeFiles/slovepose.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable slovepose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/commusim/RM/vision/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable slovepose"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/slovepose.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
