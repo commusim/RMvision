@@ -63,9 +63,5 @@ vector<Point2d> Recog(Mat frame){
     vector<Point2d> p = { point1,point2,point4,point3 };
             
     cout << p[0]<<p[1]<<p[2]<<p[3] << endl;
-    for (int i = 0; i < 4; i++) {
-        line(frame, p[i%4], p[(i+1)%4], Scalar(0, 255, 0), 2);
-    }           
-    imshow("video", frame);
     return p;
 }

@@ -4,6 +4,7 @@
 #include <opencv4/opencv2/opencv.hpp>
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
+#include <time.h>
 
 using namespace std;
 using namespace cv;
@@ -34,7 +35,9 @@ int main(){
     Mat frame;
     VideoCapture video;
     video.open("/home/commusim/RM/vision/video/手动曝光版.mp4");
+    clock_t start,end;
     while(1){
+        start = clock();
         // 读取视频序列中所有帧数的图像
         video >> frame;
         if (frame.empty()) {
@@ -64,6 +67,9 @@ int main(){
 	    P_oc = -rotMat.inv() * Tvec;
 	    // 求解相机的世界坐标，得出p_oc的第三个元素即相机到物体的距离即深度信息，单位是mm
 	    cout << "P_oc" << endl << P_oc << endl;
+        end = clock();
+        cout<<"time = "<<double(end-start)/CLOCKS_PER_SEC*1000<<"ms"<<endl;  //输出时间（单位：ｓ）
     }
+
 }
 
