@@ -96,12 +96,12 @@ src/clean: src/CMakeFiles/slovepose.dir/clean
 src/CMakeFiles/slovepose.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/slovepose.dir/build.make src/CMakeFiles/slovepose.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/slovepose.dir/build.make src/CMakeFiles/slovepose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/commusim/RM/vision/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target slovepose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/commusim/RM/vision/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target slovepose"
 .PHONY : src/CMakeFiles/slovepose.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/slovepose.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/commusim/RM/vision/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/commusim/RM/vision/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/slovepose.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/commusim/RM/vision/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/slovepose.dir/rule

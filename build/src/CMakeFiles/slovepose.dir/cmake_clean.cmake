@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../../bin/slovepose.pdb"
   "CMakeFiles/slovepose.dir/PNP.cpp.o"
   "CMakeFiles/slovepose.dir/PNP.cpp.o.d"
+  "CMakeFiles/slovepose.dir/imp_reco.cpp.o"
+  "CMakeFiles/slovepose.dir/imp_reco.cpp.o.d"
   "CMakeFiles/slovepose.dir/real3D.cpp.o"
   "CMakeFiles/slovepose.dir/real3D.cpp.o.d"
   "CMakeFiles/slovepose.dir/recognition.cpp.o"

@@ -154,6 +154,30 @@ PNP.cpp.s:
 	cd /home/commusim/RM/vision/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/slovepose.dir/build.make src/CMakeFiles/slovepose.dir/PNP.cpp.s
 .PHONY : PNP.cpp.s
 
+imp_reco.o: imp_reco.cpp.o
+.PHONY : imp_reco.o
+
+# target to build an object file
+imp_reco.cpp.o:
+	cd /home/commusim/RM/vision/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/slovepose.dir/build.make src/CMakeFiles/slovepose.dir/imp_reco.cpp.o
+.PHONY : imp_reco.cpp.o
+
+imp_reco.i: imp_reco.cpp.i
+.PHONY : imp_reco.i
+
+# target to preprocess a source file
+imp_reco.cpp.i:
+	cd /home/commusim/RM/vision/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/slovepose.dir/build.make src/CMakeFiles/slovepose.dir/imp_reco.cpp.i
+.PHONY : imp_reco.cpp.i
+
+imp_reco.s: imp_reco.cpp.s
+.PHONY : imp_reco.s
+
+# target to generate assembly for a file
+imp_reco.cpp.s:
+	cd /home/commusim/RM/vision/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/slovepose.dir/build.make src/CMakeFiles/slovepose.dir/imp_reco.cpp.s
+.PHONY : imp_reco.cpp.s
+
 real3D.o: real3D.cpp.o
 .PHONY : real3D.o
 
@@ -238,6 +262,9 @@ help:
 	@echo "... PNP.o"
 	@echo "... PNP.i"
 	@echo "... PNP.s"
+	@echo "... imp_reco.o"
+	@echo "... imp_reco.i"
+	@echo "... imp_reco.s"
 	@echo "... real3D.o"
 	@echo "... real3D.i"
 	@echo "... real3D.s"

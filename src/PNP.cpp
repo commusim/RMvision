@@ -28,7 +28,7 @@ std::pair<Mat, Mat> posePNP(Mat camera_matrix,Mat dist_coeffs,Mat image,
 	Mat_<float> rotMat(3, 3);
 	Rodrigues(Rvec, rotMat);
 	// 旋转向量转成旋转矩阵
-	cout << "rotMat" << endl << rotMat << endl << endl;
+	// cout << "rotMat" << endl << rotMat << endl << endl;
 
 	Mat P_oc;
 	P_oc = -rotMat.inv() * Tvec;

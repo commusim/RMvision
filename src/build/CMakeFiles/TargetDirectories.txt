@@ -1,3 +1,0 @@
-/home/commusim/RM/vision/src/build/CMakeFiles/slovepose.dir
-/home/commusim/RM/vision/src/build/CMakeFiles/edit_cache.dir
-/home/commusim/RM/vision/src/build/CMakeFiles/rebuild_cache.dir

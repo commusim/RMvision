@@ -2,9 +2,7 @@
 #include "stdio.h"
 #include <iostream> 
 #include <opencv4/opencv2/opencv.hpp>
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include "function.h"
+#include <function.h>
 using namespace std;
 using namespace cv;
 
@@ -41,29 +39,39 @@ int main(){
         vector<Point2d> image_points = imp_reco(frame);
         //  vector<Point2d> image_points = Reco(frame);
         vector<Point3d> model_points;
-        for(int i=0;i<4;i++){
-            Point3d point = get3D(cameraMatrix,image_points[i].x,image_points[i].y,10);
-            model_points.push_back(point);
+        if(!image_points.empty())
+        {
+            for(int i=0;i<4;i++){
+                Point3d point = get3D(cameraMatrix,image_points[i].x,image_points[i].y,10);
+                model_points.push_back(point);
+            }
+            // 实现PNP解算
+            pair<Mat, Mat> vector;
+            vector = posePNP(cameraMatrix,dist_coeffs,frame,image_points,model_points);
+            Mat Rvec;
+            Mat_<float> Tvec;
+            vector.first.convertTo(Rvec, CV_32F);  // 旋转向量转换格式
+            vector.second.convertTo(Tvec, CV_32F); // 平移向量转换格式 
+
+            Mat_<float> rotMat(3, 3);
+            Rodrigues(Rvec, rotMat);
+            // 旋转向量转成旋转矩阵
+            cout << "rotMat" << endl << rotMat << endl << endl;
+
+            Mat P_oc;
+            P_oc = -rotMat.inv() * Tvec;
+            // 求解相机的世界坐标，得出p_oc的第三个元素即相机到物体的距离即深度信息，单位是mm
+            cout << "P_oc" << endl << P_oc << endl;
+           
         }
-        // 实现PNP解算
-        pair<Mat, Mat> vector;
-        vector = posePNP(cameraMatrix,dist_coeffs,frame,image_points,model_points);
-        Mat Rvec;
-	    Mat_<float> Tvec;
-        vector.first.convertTo(Rvec, CV_32F);  // 旋转向量转换格式
-	    vector.second.convertTo(Tvec, CV_32F); // 平移向量转换格式 
-
-	    Mat_<float> rotMat(3, 3);
-	    Rodrigues(Rvec, rotMat);
-	    // 旋转向量转成旋转矩阵
-	    cout << "rotMat" << endl << rotMat << endl << endl;
-
-	    Mat P_oc;
-	    P_oc = -rotMat.inv() * Tvec;
-	    // 求解相机的世界坐标，得出p_oc的第三个元素即相机到物体的距离即深度信息，单位是mm
-	    cout << "P_oc" << endl << P_oc << endl;
+        else{
+            cout << "NO enough points" << endl;
+            //continue;
+        }
         end = clock();
         cout<<"time = "<<double(end-start)/CLOCKS_PER_SEC*1000<<"ms"<<endl;  //输出时间（单位：ｓ）
+        
+        
     }
 
 }
