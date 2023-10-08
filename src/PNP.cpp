@@ -28,15 +28,16 @@ std::pair<Mat, Mat> posePNP(Mat camera_matrix,Mat dist_coeffs,Mat image,
 	Mat_<float> rotMat(3, 3);
 	Rodrigues(Rvec, rotMat);
 	// 旋转向量转成旋转矩阵
-	cout << "rotMat" << endl << rotMat << endl << endl;
+	// cout << "rotMat" << endl << rotMat << endl << endl;
 
 	Mat P_oc;
 	P_oc = -rotMat.inv() * Tvec;
 	// 求解相机的世界坐标，得出p_oc的第三个元素即相机到物体的距离即深度信息，单位是mm
 	cout << "P_oc" << endl << P_oc << endl;
-
+	/*
 	imshow("Output", image);
 	waitKey(0);
+	*/
 	
 	return std::make_pair(rotation_vector, translation_vector);
 }

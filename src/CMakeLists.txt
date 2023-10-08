@@ -1,4 +1,5 @@
-aux_source_directory(SRC_LIST .)
+include_directories(../include)
+aux_source_directory(. SRC_LIST)
 
 add_executable(slovepose ${SRC_LIST})
 
